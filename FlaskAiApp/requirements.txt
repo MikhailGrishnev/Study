@@ -1,0 +1,3 @@
+5flask
+python-dotenv
+requests
