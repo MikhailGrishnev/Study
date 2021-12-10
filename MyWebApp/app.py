@@ -19,9 +19,12 @@ def login():
         if request.form.get("login"):
             username = request.form.get('username')
             password = request.form.get('password')
-            cursor.execute("SELECT * FROM service.users WHERE login=%s AND password=%s", (str(username), str(password)))
+            # cursor.execute("SELECT * FROM service.users WHERE login=%s AND password=%s", (str(username), str(password)))
+            cursor.execute(f"SELECT * FROM service.users WHERE login='{username}' AND password='{password}'")
             records = list(cursor.fetchall())
-            print(f"User: {username}\nPassword: {password}\nRecords: {records}")
+            print("=" * 20)
+            print(f"Login by:\nUser: {username}\nPassword: {password}\nRecords: {records}")
+            print("=" * 20)
 
             if username and password and records:
                 return render_template('account.html', full_name=records[0][1], log=username, pas=password)
@@ -38,14 +41,20 @@ def registration():
         login = request.form.get('login')
         password = request.form.get('password')
         if str(name) and str(login) and str(password):
-            cursor.execute("SELECT * FROM service.users WHERE login=%s", (str(login),))
+            print("=" * 20)
+            print(f"Registration for:\nUser: {name}\nLogin: {login}\nPassword: {password}")
+            print("=" * 20)
+            # cursor.execute("SELECT * FROM service.users WHERE login=%s", (str(login),))
+            cursor.execute(f"SELECT * FROM service.users WHERE login='{login}'")
             records = cursor.fetchall()
             if records:
                 return redirect("/registration/")
             else:
-                cursor.execute('insert into service.users (full_name, login, password) VALUES (%s, %s, %s);', (str(name), str(login), str(password)))
+                # cursor.execute('insert into service.users (full_name, login, password) VALUES (%s, %s, %s);', (str(name), str(login), str(password)))
+                cursor.execute(
+                    f"insert into service.users (full_name, login, password) "
+                    f"VALUES ('{name}', '{login}', '{password}');")
+                conn.commit()
                 return redirect('/login/')
-
-        conn.commit()
 
     return render_template('registration.html')
