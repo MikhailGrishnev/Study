@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/compose-model-1656790778119.xml" value="0.3108108108108108" />
+        <entry key="../../../../layout/compose-model-1656794109583.xml" value="0.33" />
+        <entry key="../../../../layout/compose-model-1656804789418.xml" value="0.31165540540540543" />
+        <entry key="app/src/main/res/drawable/ic_about.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_email_outline.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_eye_close.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_eye_open.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_facebook.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_feedback.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_forgot_password_illustration.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_google.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_more.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_password.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_privacy_policy.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_profile_card_image.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_register_img.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_right_arrow.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_rounded_notification.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_user.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_whatsapp.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/rocket.xml" value="0.1865" />
+        <entry key="app/src/main/res/drawable/smile_star.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
