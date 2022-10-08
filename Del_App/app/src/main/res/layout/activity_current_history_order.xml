@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CurrentHistoryOrderActivity"
+    android:background="@color/gray_bg">
+
+    <TextView
+        android:id="@+id/currentHistory_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="53dp"
+        android:fontFamily="@font/italianno"
+        android:text="@string/history"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/gradient"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/currentHistory_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/currentHistory_cart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_home" />
+
+        <ImageButton
+            android:id="@+id/currentHistory_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/currentHistory_user"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/currentHistory_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_shopping_cart"
+            android:alpha="0.3"/>
+
+        <ImageButton
+            android:id="@+id/currentHistory_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/currentHistory_history"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/currentHistory_cart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_user" />
+
+        <ImageButton
+            android:id="@+id/currentHistory_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/currentHistory_user"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_selected_history" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/currentHistory_adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="4th Avenue, 76"
+        android:textColor="@color/tab_text_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/currentHistory_header"
+        app:layout_constraintTop_toTopOf="@+id/currentHistory_header" />
+
+    <TextView
+        android:id="@+id/currentHistory_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="02.02.2021 18:00"
+        android:textColor="@color/tab_text_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/currentHistory_adress"
+        app:layout_constraintStart_toStartOf="@+id/currentHistory_adress"
+        app:layout_constraintTop_toBottomOf="@+id/currentHistory_adress" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/currentHistoryItems"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentHistory_date" />
+
+    <Button
+        android:id="@+id/repeatOrderBtn"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="315dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/nunito_sans"
+        android:text="@string/repeat_order"
+        android:textSize="17sp"
+        android:textColor="@color/sign_text"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView5"
+        android:layout_width="315dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/repeatOrderBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardView8">
+
+        <TextView
+            android:id="@+id/ch_order_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Order Price"
+            android:textColor="@color/sign_text"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/ch_order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="N20000"
+            android:textColor="@color/sign_text"
+            android:textSize="17sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

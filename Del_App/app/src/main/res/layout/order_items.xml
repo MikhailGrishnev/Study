@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/extraText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/extraText"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/extraRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extraText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/order_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="@+id/order_minus_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/order_dishName"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardView5">
+
+            <ImageView
+                android:id="@+id/order_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/response" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/order_dishName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Veggie tomato mix"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/materialCardView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/order_dishPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/nunito_sans"
+            android:text="N2000"
+            android:textColor="@color/price"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/materialCardView2"
+            app:layout_constraintTop_toBottomOf="@+id/order_dishName" />
+
+        <ImageButton
+            android:id="@+id/order_minus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/empty"
+            app:layout_constraintEnd_toStartOf="@+id/order_itemCounter"
+            app:layout_constraintTop_toBottomOf="@+id/order_dishPrice"
+            app:srcCompat="@drawable/ic_minus_btn" />
+
+        <ImageButton
+            android:id="@+id/order_plus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/empty"
+            app:layout_constraintStart_toEndOf="@+id/order_itemCounter"
+            app:layout_constraintTop_toBottomOf="@+id/order_dishPrice"
+            app:srcCompat="@drawable/ic_plus_btn" />
+
+        <TextView
+            android:id="@+id/order_itemCounter"
+            android:layout_width="31dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/counter"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/order_plus_btn"
+            app:layout_constraintEnd_toEndOf="@+id/order_dishPrice"
+            app:layout_constraintStart_toStartOf="@+id/order_dishPrice"
+            app:layout_constraintTop_toTopOf="@+id/order_plus_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

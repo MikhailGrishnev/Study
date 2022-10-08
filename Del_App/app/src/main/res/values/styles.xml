@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="nunitofontstyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/nunito_sans</item>
+    </style>
+    <style name="search_bar" parent="@android:style/TextAppearance.Small" >
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+</resources>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">WSR Food</string>
+    <string name="delivery">Fastest Delivery</string>
+    <string name="work">24/7</string>
+    <string name="welcome">Welcome To</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sigh Up</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="title_obs_activity">OBSActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="login">Login</string>
+    <string name="forgot_pass">Forgot password?</string>
+    <string name="password">Password</string>
+    <string name="email">E-mail</string>
+    <string name="search">Search</string>
+    <string name="results">Results</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="adress">Выберите адрес доставки</string>
+    <string name="skip_auth">Skip Authorization</string>
+    <string name="more">More</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="delivery_info">Delivery info</string>
+    <string name="delivery_info_body">Delivered between monday aug and thursday 20 from 8pm to 91:32 pm</string>
+    <string name="order">Order</string>
+    <string name="no_orders_yet">No orders yet</string>
+    <string name="order_now">Order Now</string>
+    <string name="order_price">Order Price</string>
+    <string name="extraText">Дополнительно</string>
+    <string name="history">History</string>
+    <string name="no_history_yet">No history yet</string>
+    <string name="repeat_order">Repeat Order</string>
+    <string name="cost">Cost</string>
+</resources>

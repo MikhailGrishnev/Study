@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OneItemActivity"
+    android:background="@color/gray_bg">
+
+    <ImageButton
+        android:id="@+id/oneItem_back_btn"
+        android:layout_width="8dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:background="@color/empty"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_btn" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CardView4">
+
+
+        <ImageView
+            android:id="@+id/oneItem_dishIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/response" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/oneItem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/nunito_sans"
+        android:gravity="center"
+        android:text="Veggie tomato mix"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+    <TextView
+        android:id="@+id/oneItem_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nunito_sans"
+        android:gravity="center"
+        android:text="N2000"
+        android:textColor="@color/price"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oneItem_name" />
+
+    <TextView
+        android:id="@+id/delivery_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="@string/delivery_info"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oneItem_price" />
+
+    <TextView
+        android:id="@+id/delivery_body"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/nunito_sans"
+        android:text="@string/delivery_info_body"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_header" />
+
+    <ImageButton
+        android:id="@+id/oneItem_minus_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
+        android:background="@color/empty"
+        app:layout_constraintEnd_toStartOf="@+id/oneItem_itemCounter"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_body"
+        app:srcCompat="@drawable/ic_minus_btn" />
+
+    <ImageButton
+        android:id="@+id/oneItem_plus_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/empty"
+        app:layout_constraintStart_toEndOf="@+id/oneItem_itemCounter"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_body"
+        app:srcCompat="@drawable/ic_plus_btn" />
+
+    <TextView
+        android:id="@+id/oneItem_itemCounter"
+        android:layout_width="31dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/counter"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/oneItem_plus_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/oneItem_plus_btn" />
+
+    <Button
+        android:id="@+id/oneItem_addBtn"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="315dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/nunito_sans"
+        android:text="@string/add_to_cart"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oneItem_itemCounter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
